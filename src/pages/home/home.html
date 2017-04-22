@@ -1,0 +1,14 @@
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1 class="margins" *ngFor="let icon of icons | orderby:'num'">
+        <ion-icon
+          name="{{icon.name}}"
+          [style.color]="icon.color"
+          (tap)="buildMp(icon)"
+          >
+        </ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
